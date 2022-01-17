@@ -6,14 +6,133 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ODIN RECIPES</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            padding-top: 10px;
+            font-family: 'Neonderthaw', cursive;
+            text-align: center;
+            font-weight: 2em;
+        }
+        
+        header {
+            height: 80px;
+            background: #ddd;
+            border-bottom: 2px solid #000;
+        }
+        
+        ul {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        
+        li:not(a) {
+            padding: 20px;
+            width: 250px;
+            height: 240px;
+            border: none;
+            list-style-type: none;
+            text-align: center;
+            margin: 10px;
+            border-radius: 10px;
+            background: linear-gradient( 40deg, rgb(216, 142, 46), rgb(253, 208, 5));
+            box-shadow: 3px 4px gray;
+        }
+        
+        li a {
+            border-bottom: 2px solid gray;
+            line-height: 1.3em;
+            font-size: 1.5em;
+            padding: 5px;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            text-shadow: 2px 3px goldenrod;
+            font-weight: bolder;
+        }
+        
+        .recipe-desc {
+            position: relative;
+            text-align: center;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 2px 3px gray;
+            padding: 20px;
+            margin: 5px;
+            margin-top: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .recipe-desc:hover {
+            position: relative;
+            text-align: center;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 5px;
+            transition: ease in 5s;
+            animation-name: drop-down;
+            animation-duration: 3s;
+            animation-timing-function: infinite;
+            animation-fill-mode: forward;
+        }
+        
+        @keyframes drop-down {
+            0% {
+                top: 0;
+            }
+            50% {
+                top: 120px;
+                color: #000;
+                border-radius: 15px;
+            }
+            65% {
+                top: 0;
+                border: 1px solid gray;
+                color: white;
+                border-radius: 15px;
+            }
+            100% {
+                top: 0
+            }
+        }
+    </style>
+
+
 </head>
 
 <body>
-    <h1>Odin Recipes</h1>
+    <header>
+        <h1>Odin Recipes</h1>
+    </header>
+
     <ul>
-        <li><a href='./recipes/almond_berry_smoothie.html'>Almond berry</a></li>
-        <li><a href='./recipes/avocado_breakfast_bowl.html'>Avocado Breakfast Bowl</a></li>
-        <li><a href='./recipes/chicago_deep-dish_pizza_muffin.html'>Chicago Deep-dish pizza muffin.</a></li>
+        <li>
+            <a href='./recipes/almond_berry_smoothie.html'>Almond berry</a>
+            <div class='recipe-desc'>
+                This almond berry crumb cake recipe is simple, sweet, and wonderful...
+            </div>
+        </li>
+        <li>
+            <a href='./recipes/avocado_breakfast_bowl.html'>Avocado Breakfast</a>
+            <div class='recipe-desc'>
+                Breakfast bowls are infinitely adaptable, which is why we love them...
+            </div>
+        </li>
+        <li>
+            <a href='./recipes/chicago_deep-dish_pizza_muffin.html'>Chicago Deep-dish pizza muffin.</a>
+            <div class='recipe-desc'>
+                This almond berry crumb cake recipe is simple, sweet, and wonderful...
+            </div>
+        </li>
+
     </ul>
 </body>
 
